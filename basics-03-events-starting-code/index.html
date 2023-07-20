@@ -19,7 +19,7 @@
     <section id="events">
       <h2>Events in Action</h2>
       <button @click="add(5)">Add 5</button>
-      <button v-on:click="reduce(3)">Reduce 3</button> <!-- v-on:click == @click y v-bind: == ! --> 
+      <button v-on:click="reduce(3)">Reduce 3</button> <!-- v-on:click == @click y v-bind: == : --> 
       <p v-once>Starting: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
       <!-- <input type="text" v-bind:value="name" v-on:input="setName($event,'Puccio')" v-on:keyup.enter="confirmName"> -->
