@@ -17,9 +17,23 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
-      <div class="demo" @mouseenter="selectBox('A')" @mouseleave="unSelectBox('A')" :style="{borderColor: boxASelected ? 'red' : '#ccc'}"></div>
-      <div class="demo" @mouseenter="selectBox('B')" @mouseleave="unSelectBox('B')" :style="{borderColor: boxBSelected ? 'red' : '#ccc'}"></div>
-      <div class="demo" @mouseenter="selectBox('C')" @mouseleave="unSelectBox('C')" :style="{borderColor: boxCSelected ? 'red' : '#ccc'}"></div>
+      <div 
+        class="demo" 
+        @mouseenter="selectBox('A')" 
+        @mouseleave="unSelectBox('A')" 
+        :class="boxAClases"
+      ></div>
+      <div 
+       @mouseenter="selectBox('B')" 
+       @mouseleave="unSelectBox('B')" 
+       :class="['demo',{active:boxBSelected}]"
+      ></div>
+      <div 
+        class="demo" 
+        @mouseenter="selectBox('C')" 
+        @mouseleave="unSelectBox('C')" 
+        :class="{active:boxCSelected}"
+      ></div>
     </section>
   </body>
 </html>
